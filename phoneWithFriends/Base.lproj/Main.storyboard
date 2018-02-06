@@ -1,24 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="16B-5r-uML">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--My Page View Controller-->
+        <scene sceneID="gAG-bk-uKc">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <pageViewController storyboardIdentifier="MyPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="16B-5r-uML" customClass="MyPageViewController" customModule="phoneWithFriends" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASf-vS-CYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3703" y="391"/>
+        </scene>
+        <!--MyContentViewController-->
+        <scene sceneID="ZHP-FD-oCO">
+            <objects>
+                <viewController storyboardIdentifier="MyContentViewController" title="MyContentViewController" id="bpR-9P-1SN" customClass="MyContentViewController" customModule="phoneWithFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DNm-QI-NMM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTwo" translatesAutoresizingMaskIntoConstraints="NO" id="HDK-nQ-auR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJu-h6-Jf4">
+                                <rect key="frame" x="30" y="70" width="315" height="497"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="i0b-gM-RO4">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="497"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzh-Uy-A9W">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="62.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtW-ph-qBy">
+                                                <rect key="frame" x="0.0" y="62.5" width="315" height="63"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tt-xf-VMS">
+                                                <rect key="frame" x="0.0" y="125.5" width="315" height="62.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DU-TK-vFa">
+                                                <rect key="frame" x="0.0" y="188" width="315" height="63"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emd-kd-qrB">
+                                                <rect key="frame" x="0.0" y="251" width="315" height="62.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qs-1t-Dre">
+                                                <rect key="frame" x="0.0" y="313.5" width="315" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ic-AZ-0nR">
+                                                <rect key="frame" x="0.0" y="313.5" width="315" height="91.5"/>
+                                                <state key="normal" title="Add Friend"/>
+                                                <connections>
+                                                    <action selector="addFriendButton" destination="bpR-9P-1SN" eventType="touchUpInside" id="VoF-d7-JCN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiI-eO-21R">
+                                                <rect key="frame" x="0.0" y="405" width="315" height="92"/>
+                                                <state key="normal" title="Checkout My Profile!"/>
+                                                <connections>
+                                                    <segue destination="iKU-cE-egM" kind="show" id="vnZ-P2-c2X"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92621759664372805" green="1" blue="0.96307833410268229" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="i0b-gM-RO4" secondAttribute="trailing" id="FCH-Ch-SW2"/>
+                                    <constraint firstItem="i0b-gM-RO4" firstAttribute="top" secondItem="iJu-h6-Jf4" secondAttribute="top" id="HEA-Go-aMi"/>
+                                    <constraint firstItem="i0b-gM-RO4" firstAttribute="leading" secondItem="iJu-h6-Jf4" secondAttribute="leading" id="gjJ-3I-Xsv"/>
+                                    <constraint firstAttribute="bottom" secondItem="i0b-gM-RO4" secondAttribute="bottom" id="yiE-F2-chM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bxQ-S6-mk5" firstAttribute="trailing" secondItem="iJu-h6-Jf4" secondAttribute="trailing" constant="30" id="04F-Lu-a1T"/>
+                            <constraint firstItem="HDK-nQ-auR" firstAttribute="top" secondItem="bxQ-S6-mk5" secondAttribute="top" id="4oE-2C-nmE"/>
+                            <constraint firstItem="HDK-nQ-auR" firstAttribute="trailing" secondItem="bxQ-S6-mk5" secondAttribute="trailing" id="JGT-aV-P3o"/>
+                            <constraint firstItem="HDK-nQ-auR" firstAttribute="leading" secondItem="bxQ-S6-mk5" secondAttribute="leading" id="WPL-9b-XgL"/>
+                            <constraint firstItem="iJu-h6-Jf4" firstAttribute="top" secondItem="bxQ-S6-mk5" secondAttribute="top" constant="50" id="XZc-QI-fOX"/>
+                            <constraint firstItem="iJu-h6-Jf4" firstAttribute="leading" secondItem="bxQ-S6-mk5" secondAttribute="leading" constant="30" id="cDn-N2-wR1"/>
+                            <constraint firstItem="bxQ-S6-mk5" firstAttribute="bottom" secondItem="iJu-h6-Jf4" secondAttribute="bottom" constant="100" id="cEw-rE-vOQ"/>
+                            <constraint firstItem="bxQ-S6-mk5" firstAttribute="bottom" secondItem="HDK-nQ-auR" secondAttribute="bottom" id="dFY-rr-Ju3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bxQ-S6-mk5"/>
                     </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="RtW-ph-qBy" id="dmH-2F-eC5"/>
+                        <outlet property="descriptionLabel" destination="2tt-xf-VMS" id="V00-0x-ZVj"/>
+                        <outlet property="friendButton" destination="7ic-AZ-0nR" id="gBW-nH-Anx"/>
+                        <outlet property="friendsLabel" destination="5DU-TK-vFa" id="DJh-Ga-uD4"/>
+                        <outlet property="locationLabel" destination="emd-kd-qrB" id="IuN-BM-u4K"/>
+                        <outlet property="nameLabel" destination="bzh-Uy-A9W" id="Dkf-3U-Cew"/>
+                        <outlet property="pageNumberLabel" destination="4qs-1t-Dre" id="21Q-WE-4mb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxl-Qd-tBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-3702" y="-338"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="f1B-WJ-EsK">
+            <objects>
+                <viewController id="iKU-cE-egM" customClass="UserViewController" customModule="phoneWithFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1M7-N9-t3q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundOne" translatesAutoresizingMaskIntoConstraints="NO" id="kjZ-ye-7LO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FF-Bs-kmu">
+                                <rect key="frame" x="30" y="70" width="315" height="497"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="U2t-gy-PYn">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="497"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuG-o6-CpU">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="77"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smH-BJ-Aw3">
+                                                <rect key="frame" x="0.0" y="77" width="315" height="77"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMH-6V-Ivj">
+                                                <rect key="frame" x="0.0" y="154" width="315" height="76.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dl-Ge-6E4">
+                                                <rect key="frame" x="0.0" y="230.5" width="315" height="77"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxq-pC-iSE">
+                                                <rect key="frame" x="0.0" y="307.5" width="315" height="77"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIv-IE-GY3">
+                                                <rect key="frame" x="0.0" y="384.5" width="315" height="112.5"/>
+                                                <state key="normal" title="View Other Profiles"/>
+                                                <connections>
+                                                    <segue destination="16B-5r-uML" kind="show" id="eeE-qD-m5J"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="U2t-gy-PYn" secondAttribute="bottom" id="7SO-Hv-TDf"/>
+                                    <constraint firstItem="U2t-gy-PYn" firstAttribute="leading" secondItem="4FF-Bs-kmu" secondAttribute="leading" id="9WK-O0-WmN"/>
+                                    <constraint firstAttribute="trailing" secondItem="U2t-gy-PYn" secondAttribute="trailing" id="IcN-q9-6fC"/>
+                                    <constraint firstItem="U2t-gy-PYn" firstAttribute="top" secondItem="4FF-Bs-kmu" secondAttribute="top" id="NmF-4L-K6V"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4FF-Bs-kmu" firstAttribute="leading" secondItem="Vle-Fk-beO" secondAttribute="leading" constant="30" id="Ahc-D5-7rk"/>
+                            <constraint firstItem="4FF-Bs-kmu" firstAttribute="top" secondItem="Vle-Fk-beO" secondAttribute="top" constant="50" id="HhQ-ib-B7g"/>
+                            <constraint firstItem="Vle-Fk-beO" firstAttribute="bottom" secondItem="kjZ-ye-7LO" secondAttribute="bottom" id="IlF-JF-194"/>
+                            <constraint firstItem="Vle-Fk-beO" firstAttribute="trailing" secondItem="4FF-Bs-kmu" secondAttribute="trailing" constant="30" id="JNi-Sy-uMS"/>
+                            <constraint firstItem="Vle-Fk-beO" firstAttribute="trailing" secondItem="kjZ-ye-7LO" secondAttribute="trailing" id="LMm-m7-cFH"/>
+                            <constraint firstItem="Vle-Fk-beO" firstAttribute="bottom" secondItem="4FF-Bs-kmu" secondAttribute="bottom" constant="100" id="UUW-qH-fVd"/>
+                            <constraint firstItem="kjZ-ye-7LO" firstAttribute="top" secondItem="Vle-Fk-beO" secondAttribute="top" id="oz7-nY-oTT"/>
+                            <constraint firstItem="kjZ-ye-7LO" firstAttribute="leading" secondItem="Vle-Fk-beO" secondAttribute="leading" id="xPh-uz-a98"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vle-Fk-beO"/>
+                    </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="smH-BJ-Aw3" id="iHy-OK-UIn"/>
+                        <outlet property="descriptionLabel" destination="vMH-6V-Ivj" id="50L-7h-ThY"/>
+                        <outlet property="friendsLabel" destination="0dl-Ge-6E4" id="hZo-ud-3cG"/>
+                        <outlet property="locationLabel" destination="uxq-pC-iSE" id="amO-hh-HIg"/>
+                        <outlet property="nameLabel" destination="LuG-o6-CpU" id="tyZ-Na-RaR"/>
+                        <outlet property="profilesButton" destination="fIv-IE-GY3" id="5dx-4D-c0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsl-Fd-KJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2722" y="-337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundOne" width="744" height="1392"/>
+        <image name="backgroundTwo" width="744" height="1392"/>
+    </resources>
 </document>
