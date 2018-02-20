@@ -9,6 +9,7 @@
 import Foundation
 
 class Person {
+    
     var firstName: String
     var lastName: String
     var age: Int
@@ -16,10 +17,12 @@ class Person {
     var friends: [Person]
     var location: String
     
+    // first and last names are tracked but not used
     var name: String {
         return "\(firstName) \(lastName)"
     }
     
+    // create a person
     init(firstName: String, lastName: String, age: Int, description: String?, friends: [Person], location: String){
         self.firstName = firstName
         self.lastName = lastName
@@ -29,6 +32,7 @@ class Person {
         self.location = location
     }
     
+    // add a friend
     func addFriend(newFriend: Person){
         for friend in friends{
             if(friend === newFriend){
@@ -39,6 +43,7 @@ class Person {
         newFriend.addFriend(newFriend: self)
     }
     
+    // static function for testing that gives a list of fake people
     static func createPersons() -> [Person] // array of persons created
     {
         // a test
@@ -52,12 +57,12 @@ class Person {
     
     func getFriendStr() -> String{
         var str = ""
-        if (friends.count > 3) {
+        if (friends.count > 2) {
             return "\(self.firstName) has \(friends.count) friends."
         }
         else if(friends.count > 0){
             for friend in friends{
-                str = str + "\(friend.name) "
+                str = str + "\(friend.name), "
             }
             return str
         }

@@ -10,17 +10,26 @@ import UIKit
 
 class MyPageViewController: UIPageViewController {
     
-    
+    // the PageViewController, usually self.
     var pageController : MyPageViewController?
     
-    var numberOfPages = 4
-    var persons: [Person]!// = Person.createPersons() // list of fake users
-    var user = User.createMe() // a fake
+    var numberOfPages: Int! // number of pages
+    var persons: [Person]! // list of users
+    var user: User! // the user
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // persons is created or already exists
         persons = pageController?.persons ?? Person.createPersons()
+        
+        // user is created or already exits
         user = pageController?.user ?? User.createMe()
+        
+        // number of pages is set to the number of persons (dynamic)
+        numberOfPages = persons.count
+        
+        
+        // gives an array of viewControllers which will be the pages
         setViewControllers([createViewController(pageNumber: 1)],
                            direction: .forward,
                            animated: false, 
@@ -29,22 +38,22 @@ class MyPageViewController: UIPageViewController {
         dataSource = self
     }
     
+    // created views programatically from data (persons)
     func createViewController(pageNumber: Int) -> UIViewController {
+        // creates these stories as instances of MyContentViewControllers
         let contentViewController = 
             storyboard?.instantiateViewController(withIdentifier: "MyContentViewController")
                 as! MyContentViewController
-        contentViewController.pageNumber = pageNumber
-        contentViewController.pageController = self
-        contentViewController.user = user // assigns the user to a fake account
-        contentViewController.person = persons[pageNumber-1] // Assigns a fake user to a page.
-        return contentViewController
+        
+        contentViewController.pageNumber = pageNumber // gives it a page number
+        contentViewController.pageController = self // gives it a copy of the pageview
+        contentViewController.user = user // tells the view who the user is
+        contentViewController.person = persons[pageNumber-1] // Assigns a person to the page who is of the correct number in list
+        return contentViewController // send it back
     }
-    
-    //func morePages(){
-        //numberOfPages = numberOfPages + 1
-    //}
 }
 
+// this is what handles going from page to page and creates the view as you request to go to that page
 extension MyPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         return createViewController(
@@ -59,6 +68,7 @@ extension MyPageViewController: UIPageViewControllerDataSource {
     }
 }
 
+// function to determine what page to go to
 func mod(x: Int, m: Int) -> Int{
     let r = x % m
     return r < 0 ? r + m : r
